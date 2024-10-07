@@ -1,0 +1,25 @@
+name: Run Tests and Lint
+
+on:
+
+    push:
+
+        branches: - main
+
+jobs:
+
+    test-and-lint:
+
+    runs-on: ubuntu-latest
+
+    name: Run ESLint and Jest Tests
+
+    steps:
+
+        - uses: actions/checkout@v3
+
+        - uses: bahmutov/npm-install@v1
+
+        - run: npm run lint
+
+        - run: npm run test
