@@ -23,4 +23,13 @@ describe("QueryProcessor", () => {
         const response: string = QueryProcessor(query);
         expect(response).toBe("My Andrew ID is yufang.");
       });
+
+    test('should add numbers', () => {
+        expect(QueryProcessor("What is 5 plus 52?")).toEqual("57");
+        expect(QueryProcessor("What is 12 plus 1?")).toEqual("13");
+    });
+
+    test('should minus numbers', () => {
+        expect(QueryProcessor("What is 4 minus 2?")).toEqual("2");
+    });
 });

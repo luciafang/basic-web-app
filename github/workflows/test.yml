@@ -2,15 +2,13 @@ name: Run Tests and Lint
 
 on:
 
-push:
+    push:
 
-branches:
-
-- main
+        branches: - main
 
 jobs:
 
-test-and-lint:
+    test-and-lint:
 
     runs-on: ubuntu-latest
 
@@ -18,10 +16,10 @@ test-and-lint:
 
     steps:
 
-    - uses: actions/checkout@v3
+        - uses: actions/checkout@v3
 
-    - uses: bahmutov/npm-install@v1
+        - uses: bahmutov/npm-install@v1
 
-    - run: npm run lint
+        - run: npm run lint
 
-    - run: npm run test
+        - run: npm run test
